@@ -1,0 +1,173 @@
+/* ===== Reset & Global ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f5f7;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+/* ===== App Container ===== */
+.app-container {
+  width: 95%;
+  max-width: 1200px;
+  height: 90vh;
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Sidebar (Users) ===== */
+.sidebar {
+  width: 260px;
+  background: #1e293b;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.user-list {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.user-item {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #334155;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.user-item:hover {
+  background: #475569;
+}
+
+.online-status {
+  color: #22c55e;
+  font-size: 0.8rem;
+}
+
+/* ===== Chat Section ===== */
+.chat-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f1f5f9;
+}
+
+/* ===== Messages Area ===== */
+.messages-container {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 70%;
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ----- Sent Message (You) ----- */
+.message.me {
+  background: #2563eb;
+  color: white;
+  margin-left: auto;
+  text-align: right;
+  border-bottom-right-radius: 2px;
+}
+
+/* ----- Received Message ----- */
+.message.other {
+  background: #e2e8f0;
+  color: #333;
+  border-bottom-left-radius: 2px;
+}
+
+/* ===== System Messages ===== */
+.system-message {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 15px 0;
+}
+
+/* ===== Typing Indicator ===== */
+.typing-indicator {
+  font-size: 0.85rem;
+  color: #475569;
+  padding: 5px 20px;
+}
+
+/* ===== Input Area ===== */
+.input-area {
+  padding: 15px;
+  background: white;
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-area input:focus {
+  border-color: #2563eb;
+}
+
+.input-area button {
+  padding: 12px 20px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.input-area button:hover {
+  background: #1d4ed8;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 150px;
+  }
+
+  .messages-container {
+    padding: 10px;
+  }
+}
